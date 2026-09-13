@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custodia - 歯科診療所の記録・文書管理</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .nav-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .nav-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            text-decoration: none;
+        }
+        .nav-card h2 {
+            font-size: 1.2em;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+        .nav-card p {
+            color: #86868b;
+            font-size: 0.9em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        .card p, .card li {
+            color: #515154;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        .card ul, .card ol {
+            padding-left: 20px;
+        }
+        .card li {
+            margin-bottom: 6px;
+        }
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        .badge-muted {
+            display: inline-block;
+            background: #f0f0f3;
+            color: #6e6e73;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+        footer a { color: #0066cc; text-decoration: none; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 560px) {
+            .container { padding: 24px 16px; }
+            header { margin-bottom: 32px; }
+            header h1 { font-size: 2em; }
+            .nav-cards { grid-template-columns: 1fr; }
+            .nav-card { padding: 24px 20px; }
+            .card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Custodia</h1>
+            <p>カストディア</p>
+            <p style="margin-top:4px;">歯科診療所の記録・文書管理</p>
+        </header>
+
+        <div class="card" style="text-align:center; margin-bottom:32px;">
+            <p>保健所の立入検査で求められる指針・手順書・点検記録・研修や訓練の記録・従業者名簿を、1 つの画面にまとめて管理するデスクトップアプリです。院内の PC の中だけで動きます。</p>
+            <br>
+            <p><span class="badge">外部送信なし</span> <span class="badge">Windows / macOS</span> <span class="badge">無償</span></p>
+        </div>
+
+        <div class="nav-cards">
+            <a href="./support.html" class="nav-card">
+                <h2>サポート</h2>
+                <p>よくある質問・お問い合わせ</p>
+            </a>
+            <a href="./privacy.html" class="nav-card">
+                <h2>プライバシーポリシー</h2>
+                <p>データの取り扱いについて</p>
+            </a>
+            <a href="./Custodia_ダッシュボード_サンプル.html" class="nav-card">
+                <h2>サンプル画面</h2>
+                <p>ダッシュボードの見本（架空データ）</p>
+            </a>
+            <a href="https://github.com/greenhills-dc/custodia-support/releases" class="nav-card">
+                <h2>ダウンロード <span class="badge-muted">準備中</span></h2>
+                <p>インストーラの配布ページ</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>短い紹介</h2>
+            <p>保健所の立入検査（医療法第 25 条）では、指針・手順書・機器の点検記録・研修や訓練の記録・従業者名簿などを、「作ってあること」と「続けていること」の両方で見られます。Custodia は、それらを 1 か所にまとめ、期限が来たら教えてくれる、歯科診療所のための記録台帳です。院内の PC だけで動き、データは外に出ません。</p>
+        </div>
+
+        <div class="card">
+            <h2>どんな困りごとに効くか</h2>
+            <ul>
+                <li>指針や手順書は作ったが、どれが最新版か分からない。改定の履歴が残っていない。</li>
+                <li>機器の点検、消防設備、AED、X 線の漏えい線量測定など、周期の違う点検の期限を人が覚えている。</li>
+                <li>研修・訓練を「年 2 回」やったはずだが、出席者や資料が散らばっていて証拠にならない。</li>
+                <li>検査の前になって、何が足りないかを慌てて洗い出している。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Custodia がすること</h2>
+            <ul>
+                <li><strong>管理項目</strong>: 医療安全管理指針、院内感染対策指針、医薬品業務手順書、放射線の指針など、検査で見られる文書を一覧にし、本文と改定履歴を保存します。添付（PDF・Word・Excel・画像）もその場で見られます。</li>
+                <li><strong>リマインド</strong>: 日・週・月・年の周期で「本日の点検」「今月の期限」を表示します。実施したら記録を残すだけで、次の期限が自動で進みます。</li>
+                <li><strong>機器台帳</strong>: 保守点検計画と実施記録を機器ごとに残し、様式（Excel）に出力できます。</li>
+                <li><strong>研修・訓練・委員会</strong>: 1 回の入力で出席者・資料・周知記録まで残せます。実施回数の不足はダッシュボードに出ます。</li>
+                <li><strong>その他</strong>: インシデント記録、産業廃棄物の許可証と業務委託契約の期限、健康診断の記録、立入検査の指摘一覧との突合表。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Custodia がしないこと</h2>
+            <ul>
+                <li>記録を勝手に作りません。過去の点検や研修を遡って埋める機能はなく、実施したものだけを残す設計です。</li>
+                <li>法令の解釈を保証しません。同梱の文書は雛形で、各医院の実態に合わせて確認・改定して使います。</li>
+                <li>インターネットへ接続しません。データは PC 内の「書類/Custodia」フォルダにあり、毎晩自動でバックアップされます。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>始め方</h2>
+            <ol>
+                <li>インストーラを実行し、アイコンから起動します（Windows／macOS）。</li>
+                <li>最初の画面で管理者と医院情報を登録し、サンプルを入れるかを選びます。</li>
+                <li>サンプルには文書 12 本・機器 19 台・リマインド 28 本と、各医院が確認すべき設問 44 問が入っています。設問に答えながら文書を自院向けに直していくと、検査の準備がそのまま進みます。</li>
+                <li>機器・職員・県の指摘一覧は CSV で一括登録できます。</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>費用と条件</h2>
+            <ul>
+                <li>無償です。再配布はできません（配布元からお受け取りください）。</li>
+                <li>無保証です。法令適合や検査結果について責任は負いません。</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Custodia</p>
+            <p><a href="./support.html">サポート</a> ・ <a href="./privacy.html">プライバシーポリシー</a> ・ <a href="./Custodia_ダッシュボード_サンプル.html">サンプル画面</a></p>
+        </footer>
+    </div>
+</body>
+</html>

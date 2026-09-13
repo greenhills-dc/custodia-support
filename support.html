@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custodia サポート</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+        .card p, .card li {
+            color: #515154;
+            margin-bottom: 8px;
+        }
+        .card ul, .card ol {
+            padding-left: 20px;
+        }
+        .card li {
+            margin-bottom: 6px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e5e7;
+            padding: 16px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            font-size: 1em;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: #86868b;
+            font-size: 0.95em;
+        }
+        .contact-info {
+            text-align: center;
+            padding: 24px;
+        }
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            background: #f5f5f7;
+            border-radius: 4px;
+            padding: 1px 5px;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+        footer a { color: #0066cc; text-decoration: none; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 560px) {
+            .container { padding: 24px 16px; }
+            header { margin-bottom: 32px; }
+            .card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Custodia サポート</h1>
+            <p>歯科診療所の記録・文書管理</p>
+        </header>
+
+        <!-- お問い合わせ -->
+        <div class="card contact-info">
+            <h2>お問い合わせ</h2>
+            <p>不具合のご報告・ご質問・ご要望は、下記までご連絡ください。</p>
+            <br>
+            <p><a href="mailto:support@greenhills-dc.org">support@greenhills-dc.org</a></p>
+            <br>
+            <p style="font-size:0.9em;">お使いの OS（Windows／macOS）とアプリの版数を添えていただけると、お返事が早くなります。</p>
+        </div>
+
+        <!-- アプリについて -->
+        <div class="card">
+            <h2>アプリについて</h2>
+            <p>Custodia（カストディア）は、保健所の立入検査（医療法第 25 条）で求められる指針・手順書・点検記録・研修や訓練の記録・従業者名簿などを、ひとつの画面で管理する歯科診療所向けのアプリです。</p>
+            <br>
+            <p><span class="badge">外部送信なし</span> インターネットへは接続しません。入力したデータは PC の中だけに残ります。</p>
+            <ul style="margin-top:16px;">
+                <li>Windows／macOS の PC で動きます（Python 製。実行に必要なものは同梱しています）。</li>
+                <li>画面はブラウザで開きます。院内 LAN への公開は任意で、有効にしても院内ネットワーク内で完結します。</li>
+                <li>データは PC 内の「書類／Custodia」フォルダ（data／出力／logs）に保存され、毎晩自動でバックアップされます。</li>
+                <li>無償で提供し、再配布はできません。法令適合や検査結果についての保証はありません。詳しくは同梱の LICENSE.txt をご覧ください。</li>
+            </ul>
+        </div>
+
+        <!-- よくある質問 -->
+        <div class="card">
+            <h2>よくある質問</h2>
+
+            <div class="faq-item">
+                <h3>Q. 起動しようとすると警告が出ます。</h3>
+                <p>配布物に署名をしていないため、macOS では「開発元を確認できません」、Windows では SmartScreen の警告が出ることがあります。macOS はアプリを右クリック（control＋クリック）→「開く」、Windows は「詳細情報」→「実行」で起動できます。2 回目からは通常どおり開けます。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. 入力したデータはどこにありますか。</h3>
+                <p>PC の「書類（ドキュメント）」の中の <code>Custodia</code> フォルダです。<code>data</code> に台帳と添付ファイルとバックアップ、<code>出力</code> に Word／Excel の様式、<code>logs</code> に起動ログがあります。外部へ送信されることはありません。控えを取るときは、このフォルダを丸ごとコピーしてください。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. 同梱の指針・手順書はそのまま使えますか。</h3>
+                <p>雛形です。各医院の実態に合わせて確認・改定してからお使いください。確認すべき点は、アプリの「導入時確認事項」に 44 問の設問として入っています。設問に答えながら直していくと、自院向けの文書になります。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. 別の Custodia が動いている PC では、どうなりますか。</h3>
+                <p>使っていないポートへ自動で移ります（5001 → 5011 → 5021 の順）。別の版が先に動いていても、その画面を開いてしまうことはありません。どの番号になったかは起動ログに 1 行残ります。候補がすべてふさがっているときは、起動時に <code>--port</code> で空いている番号を指定してください。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. CSV での一括登録はできますか。</h3>
+                <p>できます。機器台帳・職員・立入検査の指摘一覧は CSV から取り込めます。台帳の内容は CSV や Word／Excel の様式として書き出せます。</p>
+            </div>
+        </div>
+
+        <!-- 版数の確認 -->
+        <div class="card">
+            <h2>版数の確認方法</h2>
+            <p>次のいずれでも確認できます。お問い合わせの際は、この番号をお知らせください。</p>
+            <ul>
+                <li>画面左上のアプリ名の右にあるバッジ（例: <code>v2.0.0</code>）</li>
+                <li>どの画面でも、いちばん下のフッター（<code>Custodia v…</code>）</li>
+                <li>「サーバー管理」画面の「バージョン」欄</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Custodia</p>
+            <p><a href="./">紹介</a> ・ <a href="./privacy.html">プライバシーポリシー</a> ・ <a href="./Custodia_ダッシュボード_サンプル.html">サンプル画面</a></p>
+        </footer>
+    </div>
+</body>
+</html>

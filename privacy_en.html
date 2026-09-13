@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Custodia</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        .card p, .card li {
+            color: #515154;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card ul li {
+            margin-bottom: 6px;
+        }
+        .highlight {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 16px;
+        }
+        .lang-switch a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .lang-switch a:hover { text-decoration: underline; }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            background: #f5f5f7;
+            border-radius: 4px;
+            padding: 1px 5px;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+        footer a { color: #0066cc; text-decoration: none; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 560px) {
+            .container { padding: 24px 16px; }
+            header { margin-bottom: 32px; }
+            .card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="./privacy.html">日本語</a>
+        </div>
+
+        <header>
+            <h1>Privacy Policy</h1>
+            <p>Custodia (records and document management for dental clinics)</p>
+        </header>
+
+        <p style="text-align:center; color:#86868b; margin-bottom:32px;">Last updated: September 14, 2026</p>
+
+        <div class="card">
+            <h2>Introduction</h2>
+            <p>The developer of Custodia ("we", "us", or "our") respects the privacy of users and the confidentiality of the information handled by dental clinics. This Privacy Policy explains how the desktop application "Custodia" for Windows and macOS ("the App") handles information.</p>
+        </div>
+
+        <div class="card">
+            <h2>Information Collection</h2>
+            <div class="highlight">The App does not collect or transmit any information. We never obtain or view the data stored in the App.</div>
+            <p>Specifically, the following are never collected or transmitted:</p>
+            <ul>
+                <li>Personal identification information (name, email address, phone number, etc.)</li>
+                <li>Location data</li>
+                <li>Device identifiers</li>
+                <li>Usage data or analytics</li>
+                <li>Advertising identifiers</li>
+                <li>Clinic records, documents, or attached files registered in the App</li>
+                <li>Login IDs and passwords</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Data Processing</h2>
+            <p>The App runs entirely on the computer where it is installed. Everything entered is stored locally.</p>
+            <ul>
+                <li><strong>Ledger data:</strong> Clinic information, staff rosters, equipment ledgers, inspection, training and drill records, documents and their revision history are stored in <code>Custodia/data</code> inside the user's Documents folder.</li>
+                <li><strong>Attached files:</strong> PDF, Word, Excel and image files added by the user are stored in the same <code>Custodia/data</code> folder.</li>
+                <li><strong>Exported files:</strong> Word/Excel forms and CSV files are written to <code>Custodia/出力</code> (the export folder) or to a location chosen by the user.</li>
+                <li><strong>Logs:</strong> Startup and operation logs are stored in <code>Custodia/logs</code>.</li>
+                <li><strong>Backups:</strong> The App creates generational backups on the same computer every night and at startup. If the user designates a second destination (such as an external drive), a copy is also written there. Retention and deletion of backups are the user's responsibility.</li>
+                <li><strong>Account information:</strong> Login IDs and passwords are stored only on the local computer. Passwords are stored as cryptographic hashes, so neither we nor any third party can recover the original password.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Network Communication</h2>
+            <p>The App does not require an internet connection and never communicates with external servers. It performs no update checks, no usage reporting, and no cloud storage.</p>
+            <p>The App's screens are opened in a browser on the same computer. Only if the user enables LAN access can other devices on the same clinic network open the App; such communication stays within the clinic's local network. Securing that network is the user's responsibility.</p>
+        </div>
+
+        <div class="card">
+            <h2>Third-Party Sharing</h2>
+            <p>We do not provide, share, or sell any data obtained through the App to third parties. The App includes no third-party SDKs, analytics tools, tracking technologies, advertising frameworks, or crash-reporting services.</p>
+        </div>
+
+        <div class="card">
+            <h2>File System Access</h2>
+            <p>The App accesses the file system for the following purposes:</p>
+            <ul>
+                <li><strong>Reading and writing ledger data:</strong> Within the <code>Custodia</code> folder in the user's Documents folder</li>
+                <li><strong>Reading attached files:</strong> Files explicitly selected by the user</li>
+                <li><strong>Importing:</strong> CSV files explicitly selected by the user</li>
+                <li><strong>Saving exports:</strong> Forms and CSV files written at the user's request</li>
+            </ul>
+            <p>All file access results from user action; the App does not scan any other folders.</p>
+        </div>
+
+        <div class="card">
+            <h2>Apple Privacy API Usage</h2>
+            <p>The currently distributed version is a desktop application for Windows and macOS and is not distributed through the App Store, so it uses no Apple Required Reason (privacy) APIs. This section will be updated if and when an App Store version is released.</p>
+        </div>
+
+        <div class="card">
+            <h2>Intended Users</h2>
+            <p>The App is a professional tool for dental clinics. It is not intended for general consumers, nor directed to any particular age group.</p>
+        </div>
+
+        <div class="card">
+            <h2>Medical Information Notice</h2>
+            <p>The App is not designed to handle dental charts or patient information. It does, however, allow a clinic to register personal information about its own staff, such as names, license numbers, and health examination records.</p>
+            <p>Collection, use, storage, and disposal of such information are the responsibility of each clinic as the business operator handling personal information. We have no involvement with, and no means of obtaining, that information. Physical and organizational safeguards, such as securing the computer, managing accounts, and storing backups safely, must be implemented by each clinic.</p>
+        </div>
+
+        <div class="card">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>This Privacy Policy may be revised in response to changes in law or in the App's features. When changes are made, the last updated date on this page will be revised.</p>
+        </div>
+
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or concerns about privacy, please contact us at:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:privacy@greenhills-dc.org">privacy@greenhills-dc.org</a></li>
+                <li><strong>Provider:</strong> The Custodia developer</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Custodia</p>
+            <p><a href="./">Home</a> ・ <a href="./support.html">Support</a> ・ <a href="./privacy.html">日本語</a></p>
+        </footer>
+    </div>
+</body>
+</html>
