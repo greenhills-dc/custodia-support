@@ -110,11 +110,16 @@
             <p>Custodia (records and document management for dental clinics)</p>
         </header>
 
-        <p style="text-align:center; color:#86868b; margin-bottom:32px;">Last updated: September 14, 2026</p>
+        <p style="text-align:center; color:#86868b; margin-bottom:32px;">Last updated: September 20, 2026</p>
 
         <div class="card">
             <h2>Introduction</h2>
-            <p>The developer of Custodia ("we", "us", or "our") respects the privacy of users and the confidentiality of the information handled by dental clinics. This Privacy Policy explains how the desktop application "Custodia" for Windows and macOS ("the App") handles information.</p>
+            <p>The developer of Custodia ("we", "us", or "our") respects the privacy of users and the confidentiality of the information handled by dental clinics. This Privacy Policy explains how the application "Custodia" ("the App") handles information.</p>
+            <p>The App comes in two editions. <strong>Neither collects nor transmits any information.</strong> Where they differ — mainly in where data is stored — each section says so.</p>
+            <ul>
+                <li><strong>Desktop edition:</strong> a Windows and macOS application whose screens are opened in a browser on the same computer.</li>
+                <li><strong>App Store edition:</strong> an iPad and Mac application (see "About the App Store edition" below).</li>
+            </ul>
         </div>
 
         <div class="card">
@@ -134,7 +139,7 @@
 
         <div class="card">
             <h2>Data Processing</h2>
-            <p>The App runs entirely on the computer where it is installed. Everything entered is stored locally.</p>
+            <p>The App runs entirely on the device where it is installed. Everything entered is stored on that device. The locations below are those of the desktop edition; for the App Store edition see the section further down.</p>
             <ul>
                 <li><strong>Ledger data:</strong> Clinic information, staff rosters, equipment ledgers, inspection, training and drill records, documents and their revision history are stored in <code>Custodia/data</code> inside the user's Documents folder.</li>
                 <li><strong>Attached files:</strong> PDF, Word, Excel and image files added by the user are stored in the same <code>Custodia/data</code> folder.</li>
@@ -147,8 +152,9 @@
 
         <div class="card">
             <h2>Network Communication</h2>
-            <p>The App does not require an internet connection and never communicates with external servers. It performs no update checks, no usage reporting, and no cloud storage.</p>
-            <p>The App's screens are opened in a browser on the same computer. Only if the user enables LAN access can other devices on the same clinic network open the App; such communication stays within the clinic's local network. Securing that network is the user's responsibility.</p>
+            <p>The App does not require an internet connection and never communicates with anything outside the clinic. It performs no update checks, no usage reporting, and no cloud storage.</p>
+            <p>The screens of the desktop edition are opened in a browser on the same computer. Only if the user enables access from the clinic network can other devices on that network open them; such communication stays within the clinic's local network. Securing that network is the user's responsibility.</p>
+            <p>In the App Store edition, synchronisation between devices likewise stays within the clinic's local network (see the next section).</p>
         </div>
 
         <div class="card">
@@ -169,8 +175,28 @@
         </div>
 
         <div class="card">
-            <h2>Apple Privacy API Usage</h2>
-            <p>The currently distributed version is a desktop application for Windows and macOS and is not distributed through the App Store, so it uses no Apple Required Reason (privacy) APIs. This section will be updated if and when an App Store version is released.</p>
+            <h2>About the App Store edition (iPad / Mac)</h2>
+            <div class="highlight">The App Store edition also collects and transmits nothing. Records are kept on the device only.</div>
+            <ul>
+                <li><strong>Where data is kept:</strong> the ledger (records and attached files) is stored only in the app's own container (<code>Application Support/Custodia</code>). <strong>iCloud Drive and CloudKit are not used.</strong></li>
+                <li><strong>Device backup:</strong> the data folder is <strong>excluded from device backup by default</strong>. The user may opt in from Settings so that the ledger can be restored if the device is lost; the screen that offers this states plainly that opting in places a copy of the ledger in iCloud by way of the device backup.</li>
+                <li><strong>Synchronisation on the clinic network:</strong> when a clinic has more than one device, the devices can keep their ledgers in step over the clinic's own local network. Every device holds its own complete ledger; there is no central or always-on machine. Pairing requires a person: one device shows a QR code and a six-digit code, and the other reads and confirms it. All traffic stays inside the clinic's local network and never crosses the internet.</li>
+                <li><strong>Camera:</strong> used solely to read the QR code described above. No image or video is stored or transmitted.</li>
+                <li><strong>Accounts:</strong> login IDs and passwords are stored on the device only and are never synchronised. Passwords are stored as cryptographic hashes.</li>
+                <li><strong>Exports:</strong> the user chooses, each time, where PDF forms and ledger files are written.</li>
+                <li><strong>Data collected:</strong> none. The App Privacy section of the App Store listing states "Data Not Collected". No advertising, analytics or crash-reporting component is included.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Apple Required Reason API Usage</h2>
+            <p>The desktop edition is not distributed through the App Store and is therefore outside the scope of Apple's privacy manifest requirements.</p>
+            <p>The App Store edition uses only the two categories below and states its reasons in the privacy manifest bundled with the app (<code>PrivacyInfo.xcprivacy</code>). Both are used <strong>only for the app's own data on the device</strong> and never to identify a device or track a user.</p>
+            <ul>
+                <li><strong>User defaults (reason CA92.1):</strong> to remember the app's own settings on that device (whether it accepts synchronisation, and whether the data folder is included in backups).</li>
+                <li><strong>File timestamps (reason C617.1):</strong> to read and write ledger archive files (zip) and to show the size of the data folder in Settings. Only files inside the app's own container are examined.</li>
+            </ul>
+            <p>The App performs no tracking and contacts no tracking domains.</p>
         </div>
 
         <div class="card">
