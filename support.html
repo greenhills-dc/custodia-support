@@ -101,6 +101,12 @@
         footer a { color: #0066cc; text-decoration: none; }
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .ver-table-wrap { overflow-x: auto; margin: 8px 0 12px; }
+        .ver-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+        .ver-table th, .ver-table td { border: 1px solid #d2d2d7; padding: 8px 10px; text-align: left; vertical-align: top; }
+        .ver-table th { background: #f0f0f3; font-weight: 600; white-space: nowrap; }
+        .ver-table td.ver { white-space: nowrap; }
+        .ver-table td.note { font-size: 0.95em; color: #555; }
         @media (max-width: 560px) {
             .container { padding: 24px 16px; }
             header { margin-bottom: 32px; }
@@ -155,12 +161,14 @@
             </ul>
             <h3 style="margin-top:20px;">版の対応（パソコン版 ⇔ App Store 版）</h3>
             <p style="font-size:0.9em;">台帳の形は両方の版で同じです。同じ医院の中で混ぜて使うときは、下の組み合わせにそろえてください。</p>
-            <table style="font-size:0.9em;">
+            <div class="ver-table-wrap">
+            <table class="ver-table">
                 <tr><th>パソコン版</th><th>App Store 版（iPad ／ Mac）</th><th>備考</th></tr>
-                <tr><td><strong>2.20.0</strong></td><td><strong>1.6.1</strong>（iPad 公開中・Mac 審査中 2026-10-05）／1.6.0</td><td>「※」注記は全端末がこの組み合わせ以降になってから</td></tr>
-                <tr><td>2.19.0〜2.19.1</td><td>1.5.0〜1.5.1</td><td>改定履歴の取り下げは全端末が 2.19.0／1.5.0 以降になってから</td></tr>
-                <tr><td>2.15.1〜2.18.0</td><td>1.1.9〜1.4.x</td><td>同期できます</td></tr>
+                <tr><td class="ver"><strong>2.20.0</strong></td><td class="ver"><strong>1.6.1</strong>／1.6.0<br><span style="font-size:0.9em;color:#555;">iPad 公開中・Mac 審査中（2026-10-05）</span></td><td class="note">「※」注記は全端末がこの組み合わせ以降になってから</td></tr>
+                <tr><td class="ver">2.19.0〜2.19.1</td><td class="ver">1.5.0〜1.5.1</td><td class="note">改定履歴の取り下げは全端末が 2.19.0／1.5.0 以降になってから</td></tr>
+                <tr><td class="ver">2.15.1〜2.18.0</td><td class="ver">1.1.9〜1.4.x</td><td class="note">同期できます</td></tr>
             </table>
+            </div>
             <p style="font-size:0.9em;">次の 2.21.0（アカウントを端末の同期の対象に）は App Store 版 1.7.0 と同時に公開します。</p>
         </div>
 
