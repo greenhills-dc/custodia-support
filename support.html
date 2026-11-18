@@ -102,12 +102,39 @@
         footer a { color: #0066cc; text-decoration: none; }
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .ver-table-wrap { overflow-x: auto; margin: 8px 0 12px; }
-        .ver-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
-        .ver-table th, .ver-table td { border: 1px solid #d2d2d7; padding: 8px 10px; text-align: left; vertical-align: top; }
-        .ver-table th { background: #f0f0f3; font-weight: 600; white-space: nowrap; }
-        .ver-table td.ver { white-space: nowrap; }
-        .ver-table td.note { font-size: 0.95em; color: #555; }
+        .ver-list { list-style: none; padding: 0 !important; margin: 10px 0 12px; }
+        .ver-list > li.ver-item {
+            border: 1px solid #d2d2d7;
+            border-radius: 10px;
+            background: #fafafc;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            overflow-wrap: anywhere;
+        }
+        .ver-list > li.ver-item.is-latest {
+            background: #fff;
+            border-color: #0066cc;
+            border-left-width: 4px;
+            padding: 14px 16px;
+            font-size: 0.95em;
+        }
+        .ver-list > li.ver-item.is-old { padding: 8px 12px; font-size: 0.85em; }
+        .ver-pair { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin-bottom: 2px !important; color: #1d1d1f !important; }
+        .ver-side strong { white-space: nowrap; }
+        .ver-label { font-size: 0.82em; color: #86868b; margin-right: 4px; }
+        .ver-side strong { font-size: 1.1em; }
+        .is-latest .ver-side strong { font-size: 1.25em; }
+        .ver-arrow { color: #86868b; margin-right: 8px; }
+        .ver-status { font-size: 0.9em; color: #555 !important; margin-bottom: 0 !important; }
+        .ver-note { margin-top: 8px; padding-top: 8px; border-top: 1px solid #e5e5e7; }
+        .ver-note-label { display: block; font-size: 0.82em; font-weight: 600; color: #86868b; margin-bottom: 2px; }
+        .ver-note ul { padding-left: 1.2em !important; margin: 0; }
+        .ver-note li { color: #515154; margin-bottom: 4px !important; }
+        .ver-note li:last-child { margin-bottom: 0 !important; }
+        .ver-note.is-short { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; margin-top: 4px; padding-top: 4px; }
+        .ver-note.is-short .ver-note-label { display: inline; margin-bottom: 0; }
+        .ver-note.is-short p { margin-bottom: 0; color: #515154; }
         @media (max-width: 560px) {
             .container { padding: 24px 16px; }
             header { margin-bottom: 32px; }
@@ -162,17 +189,57 @@
             </ul>
             <h3 style="margin-top:20px;">版の対応（パソコン版 ⇔ App Store 版）</h3>
             <p style="font-size:0.9em;">台帳の形は両方の版で同じです。同じ医院の中で混ぜて使うときは、下の組み合わせにそろえてください。</p>
-            <div class="ver-table-wrap">
-            <table class="ver-table">
-                <tr><th>パソコン版</th><th>App Store 版（iPad ／ Mac）</th><th>備考</th></tr>
-                <tr><td class="ver"><strong>2.38.1</strong></td><td class="ver"><strong>1.22.2</strong><br><span style="font-size:0.9em;color:#555;">iPad・Mac とも公開中（1.22.2 は 2026-11-19 公開）</span></td><td class="note">点検の一覧（2.38.0／1.22.0 から）・すべての台帳をまとめて探す検索（2.37.0／1.20.0 から）・立入検査チェック表への項目の追加と原文の訂正（2.34.0／1.17.0 から）は、2.32.0⇔1.16.0 の端末には出ません。2.32.0 のパソコンで医院情報を保存すると、手を付けていない見本の文書の本文が 2.32.0 の文面に戻り、同期でほかの端末にも届くので、全端末をそろえるまでは保存しないでください。2.33.0〜2.38.0⇔1.17.0〜1.22.1 は公開していません（台帳の形は 2.27.0⇔1.12.0 から同じ〔schema_rev 5〕）</td></tr>
-                <tr><td class="ver"><strong>2.32.0</strong></td><td class="ver"><strong>1.16.0</strong><br><span style="font-size:0.9em;color:#555;">iPad・Mac とも公開中（1.16.0 は 2026-11-01 公開）</span></td><td class="note">管理項目の種別・職員の文書の種別・ログインの記録（2.27.0／1.12.0 から）と守秘義務誓約書の対象外（2.28.0／1.13.0 から）は、全端末がこの組み合わせになってから使えます。2.27.0〜2.31.0⇔1.12.0〜1.15.0 は公開していません（同じ台帳の形〔schema_rev 5〕は 2.27.0⇔1.12.0 から）</td></tr>
-                <tr><td class="ver"><strong>2.26.0</strong></td><td class="ver"><strong>1.11.3</strong>／1.11.0<br><span style="font-size:0.9em;color:#555;">iPad・Mac とも公開中（1.11.3 は 2026-10-19 公開）</span></td><td class="note">アカウントの共通化（2.21.0／1.7.0 から）と情報機器台帳（2.23.0／1.8.0 から）は、全端末がこの組み合わせになってから使えます。2.21.0〜2.25.0⇔1.7.0〜1.10.0 は公開していません（同じ台帳の形〔schema_rev 4〕は 2.23.0⇔1.8.0 から）</td></tr>
-                <tr><td class="ver"><strong>2.20.0</strong></td><td class="ver"><strong>1.6.1</strong>／1.6.0<br><span style="font-size:0.9em;color:#555;">iPad・Mac とも公開中（Mac は 2026-10-09 公開）</span></td><td class="note">点検項目の「※」注記（チェック欄の付かない補足）は、全端末がこの組み合わせ以降になってから使えます。旧版の端末では「※」の行がチェック欄として出ます</td></tr>
-                <tr><td class="ver">2.19.0〜2.19.1</td><td class="ver">1.5.0〜1.5.1</td><td class="note">改定履歴の取り下げは全端末が 2.19.0／1.5.0 以降になってから</td></tr>
-                <tr><td class="ver">2.15.1〜2.18.0</td><td class="ver">1.1.9〜1.4.x</td><td class="note">同期できます</td></tr>
-            </table>
-            </div>
+            <ul class="ver-list" aria-label="版の対応（新しい組み合わせから順に）">
+                <li class="ver-item is-latest">
+                    <p class="ver-pair"><span class="ver-side"><span class="ver-label">パソコン版</span><strong>2.38.1</strong></span><span class="ver-side"><span class="ver-arrow" aria-hidden="true">⇔</span><span class="ver-label">App Store 版（iPad ／ Mac）</span><strong>1.22.2</strong></span></p>
+                    <p class="ver-status">iPad・Mac とも公開中（1.22.2 は 2026-11-19 公開）</p>
+                    <div class="ver-note"><span class="ver-note-label">備考</span>
+                        <ul>
+                            <li>点検の一覧（2.38.0／1.22.0 から）・すべての台帳をまとめて探す検索（2.37.0／1.20.0 から）・立入検査チェック表への項目の追加と原文の訂正（2.34.0／1.17.0 から）は、2.32.0⇔1.16.0 の端末には出ません。</li>
+                            <li>2.32.0 のパソコンで医院情報を保存すると、手を付けていない見本の文書の本文が 2.32.0 の文面に戻り、同期でほかの端末にも届くので、全端末をそろえるまでは保存しないでください。</li>
+                            <li>2.33.0〜2.38.0⇔1.17.0〜1.22.1 は公開していません（台帳の形は 2.27.0⇔1.12.0 から同じ〔schema_rev 5〕）</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ver-item">
+                    <p class="ver-pair"><span class="ver-side"><span class="ver-label">パソコン版</span><strong>2.32.0</strong></span><span class="ver-side"><span class="ver-arrow" aria-hidden="true">⇔</span><span class="ver-label">App Store 版（iPad ／ Mac）</span><strong>1.16.0</strong></span></p>
+                    <p class="ver-status">iPad・Mac とも公開中（1.16.0 は 2026-11-01 公開）</p>
+                    <div class="ver-note"><span class="ver-note-label">備考</span>
+                        <ul>
+                            <li>管理項目の種別・職員の文書の種別・ログインの記録（2.27.0／1.12.0 から）と守秘義務誓約書の対象外（2.28.0／1.13.0 から）は、全端末がこの組み合わせになってから使えます。</li>
+                            <li>2.27.0〜2.31.0⇔1.12.0〜1.15.0 は公開していません（同じ台帳の形〔schema_rev 5〕は 2.27.0⇔1.12.0 から）</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ver-item">
+                    <p class="ver-pair"><span class="ver-side"><span class="ver-label">パソコン版</span><strong>2.26.0</strong></span><span class="ver-side"><span class="ver-arrow" aria-hidden="true">⇔</span><span class="ver-label">App Store 版（iPad ／ Mac）</span><strong>1.11.3</strong>／1.11.0</span></p>
+                    <p class="ver-status">iPad・Mac とも公開中（1.11.3 は 2026-10-19 公開）</p>
+                    <div class="ver-note"><span class="ver-note-label">備考</span>
+                        <ul>
+                            <li>アカウントの共通化（2.21.0／1.7.0 から）と情報機器台帳（2.23.0／1.8.0 から）は、全端末がこの組み合わせになってから使えます。</li>
+                            <li>2.21.0〜2.25.0⇔1.7.0〜1.10.0 は公開していません（同じ台帳の形〔schema_rev 4〕は 2.23.0⇔1.8.0 から）</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ver-item">
+                    <p class="ver-pair"><span class="ver-side"><span class="ver-label">パソコン版</span><strong>2.20.0</strong></span><span class="ver-side"><span class="ver-arrow" aria-hidden="true">⇔</span><span class="ver-label">App Store 版（iPad ／ Mac）</span><strong>1.6.1</strong>／1.6.0</span></p>
+                    <p class="ver-status">iPad・Mac とも公開中（Mac は 2026-10-09 公開）</p>
+                    <div class="ver-note"><span class="ver-note-label">備考</span>
+                        <ul>
+                            <li>点検項目の「※」注記（チェック欄の付かない補足）は、全端末がこの組み合わせ以降になってから使えます。</li>
+                            <li>旧版の端末では「※」の行がチェック欄として出ます</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ver-item is-old">
+                    <p class="ver-pair"><span class="ver-side"><span class="ver-label">パソコン版</span>2.19.0〜2.19.1</span><span class="ver-side"><span class="ver-arrow" aria-hidden="true">⇔</span><span class="ver-label">App Store 版（iPad ／ Mac）</span>1.5.0〜1.5.1</span></p>
+                    <div class="ver-note is-short"><span class="ver-note-label">備考</span><p>改定履歴の取り下げは全端末が 2.19.0／1.5.0 以降になってから</p></div>
+                </li>
+                <li class="ver-item is-old">
+                    <p class="ver-pair"><span class="ver-side"><span class="ver-label">パソコン版</span>2.15.1〜2.18.0</span><span class="ver-side"><span class="ver-arrow" aria-hidden="true">⇔</span><span class="ver-label">App Store 版（iPad ／ Mac）</span>1.1.9〜1.4.x</span></p>
+                    <div class="ver-note is-short"><span class="ver-note-label">備考</span><p>同期できます</p></div>
+                </li>
+            </ul>
         </div>
 
         <!-- よくある質問 -->
